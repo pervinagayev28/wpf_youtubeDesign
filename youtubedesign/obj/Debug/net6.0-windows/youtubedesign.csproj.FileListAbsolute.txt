@@ -1,0 +1,6 @@
+C:\Users\user\OneDrive\Desktop\youtubedesign\youtubedesign\obj\Debug\net6.0-windows\youtubedesign.csproj.AssemblyReference.cache
+C:\Users\user\OneDrive\Desktop\youtubedesign\youtubedesign\obj\Debug\net6.0-windows\Resources\IconStyle.baml
+C:\Users\user\OneDrive\Desktop\youtubedesign\youtubedesign\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\user\OneDrive\Desktop\youtubedesign\youtubedesign\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\user\OneDrive\Desktop\youtubedesign\youtubedesign\obj\Debug\net6.0-windows\youtubedesign_MarkupCompile.cache
+C:\Users\user\OneDrive\Desktop\youtubedesign\youtubedesign\obj\Debug\net6.0-windows\youtubedesign_MarkupCompile.lref

@@ -1,0 +1,77 @@
+﻿<Window x:Class="youtubedesign.MainWindow.xaml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:youtubedesign"
+        xmlns:icon="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        MouseDoubleClick="clickdouble"
+        Title="MainWindow" Height="720" Width="1080">
+    <Grid  >
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="white" Offset="0.0" />
+                <GradientStop Color="Gold" Offset="1.7" />
+
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <icon:PackIcon Kind="Menu" Grid.Row="0" Grid.Column="0" Style="{DynamicResource IconStyle}"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,10,0,0">
+            <icon:PackIcon Margin="0,0,0,50" Kind="Like" Grid.Row="0" Grid.Column="0" Style="{DynamicResource IconStyle}"/>
+            <icon:PackIcon Margin="0,0,0,50" Kind="Trash" Grid.Row="0" Grid.Column="0" Style="{DynamicResource IconStyle}"/>
+            <icon:PackIcon Margin="0,0,0,50" Kind="Clock" Grid.Row="0" Grid.Column="0" Style="{DynamicResource IconStyle}"/>
+            <icon:PackIcon Margin="0,0,0,50" Kind="Refresh" Grid.Row="0" Grid.Column="0" Style="{DynamicResource IconStyle}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <icon:PackIcon Grid.Column="0" Kind="Youtube" Style="{DynamicResource IconStyle}" Height="100" Width="1000"/>
+
+
+            <Border Padding="10,0,0,0" Grid.Column="1" Margin="35" CornerRadius="20" BorderThickness="2" BorderBrush="Black">
+                <TextBox  
+                 Background="Transparent" 
+           BorderThickness="0" FontSize="25" 
+           Foreground="Black" 
+           VerticalAlignment="Center">
+                </TextBox>
+            </Border>
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <icon:PackIcon Margin="10" Style="{DynamicResource IconStyle}" Kind="Camera"/>
+                <icon:PackIcon Margin="10" Style="{DynamicResource IconStyle}" Kind="Video"/>
+                <icon:PackIcon Margin="10" Style="{DynamicResource IconStyle}" Kind="EmoticonManProfile" Height="70" Width="70"/>
+            </StackPanel>
+        </Grid>
+        <Border BorderThickness="5" BorderBrush="Black" CornerRadius="20" Grid.Row="1" Grid.Column="1">
+            <ListView BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Background="Transparent" Margin="30">
+            <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10" Orientation="Vertical" Height="200" Width="250">
+                        <Image  Source="{Binding ThumbnailUrl}" MouseDown="cliked" />
+                        <TextBlock  Text="{Binding Title}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </Border>
+    </Grid>
+</Window>
